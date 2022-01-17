@@ -13,7 +13,7 @@ setopt prompt_subst
 	local git_ref=$(git symbolic-ref HEAD 2> /dev/null)
 	local git_status=$(git_prompt_status)
 	if [[ -n $git_ref ]]; then
-		prompt_workspace=" %F{white}‹%f%F{blue}${git_ref#refs/heads/}"
+		prompt_workspace=" %F{white}‹%f%F{cyan}${git_ref#refs/heads/}"
 		if [[ -n $git_status ]]; then
 			prompt_workspace="${prompt_workspace} ${git_status}"
 		fi
